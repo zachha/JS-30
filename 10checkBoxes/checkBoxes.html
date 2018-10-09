@@ -101,6 +101,11 @@
   let lastChecked;
 
   function handleCheck(e) {
+    // check if shift key is clicked AND that they are checking the box
+    // can loop through the checkboxes array and see if the indices between lastchecked and the newly checked boxes are checked or not
+    if(e.shiftKey && this.checked) {
+      
+    }
     lastChecked = this;
     console.log(e);
     console.log(lastChecked);
