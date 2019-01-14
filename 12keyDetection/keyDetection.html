@@ -7,6 +7,23 @@
 </head>
 <body>
 <script>
+  const pressed = [];
+  const secretCode = 'andyirl';
+  window.addEventListener('keyup', (e) => {
+    pressed.push(e.key)
+    if(pressed.length > 7) {
+      pressed.shift();
+      checkForCode(pressed);
+    }
+    console.log(pressed);
+  })
+
+  function checkForCode(array) {
+    if(array.join('').includes(secretCode)) {
+      console.log("WHOOP WHOOP you figured out the secret code!!");
+      cornify_add();
+    }
+  }
 </script>
 </body>
 </html>
